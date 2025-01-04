@@ -101,7 +101,6 @@ Section:Button({
   Name = "применить",
   Callback = function()
 		-- check moment, gets all pets btw
-	for Index, Value in pairs(CheckSpawns:GetChildren()) do
 		if str then
                 str.Value = pet_state.Strength
                 end
