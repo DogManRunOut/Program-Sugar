@@ -1,9 +1,9 @@
 local MacLib = loadstring(game:HttpGet("https://github.com/biggaboy212/Maclib/releases/latest/download/maclib.txt"))()
 
 local Window = MacLib:Window({
-    Title = "Stats",
-    Subtitle = "Muscle Legends",
-    Size = UDim2.fromOffset(600, 400),
+    Title = "статистика",
+    Subtitle = "легенды мышц",
+    Size = UDim2.fromOffset(400, 400),
     DragStyle = 2,
     DisabledWindowControls = {},
     ShowUserInfo = true,
@@ -14,7 +14,7 @@ local Window = MacLib:Window({
 local TabGroup = Window:TabGroup()
 
 local Tab = TabGroup:Tab({
-  Name = "Main",
+  Name = "главная",
   Image = "0"
 })
 
@@ -27,81 +27,81 @@ local Section2 = Tab:Section({
 })
 
 local pet_state = {
-    Name = "what";
-    Strength = 0;
-    Durability = 0;
-    Agility = 0;
-    Damage = 0;
-    EXP = 0;
+    Name = "Neon Guardian";
+    Strength = 100000000000;
+    Durability = 100000000000;
+    Agility = 100000000000;
+    Damage = 100000000000000;
+    EXP = 262500;
 };
 
 Section2:Label({
-  Text = "Made by Wendigo",
+  Text = "сделано мной",
 }, "TargetInput")
 
 Section:Label({
-  Text = "Press ENTER to apply each values.",
+  Text = 'нажми "применить", чтобы применить обновления',
 }, "TargetInput")
 
 Section:Input({
-	Name = "Pet name (required)",
-	Placeholder = "Number",
+	Name = "имя",
+	Placeholder = "имя питомца",
 	AcceptedCharacters = "All",
 	Callback = function(input)
-	    pet_state.Name = "Neon Guardian"
+	    pet_state.Name = input
 	end,
 }, "TargetInput")
 
 Section:Input({
-	Name = "Strength of the pet",
-	Placeholder = "Number",
+	Name = "сила",
+	Placeholder = "число",
 	AcceptedCharacters = "All",
 	Callback = function(input)
-		pet_state.Strength = 100000000000
+		pet_state.Strength = input
 	end,
 }, "TargetInput")
 
 Section:Input({
-	Name = "Durability of the pet",
-	Placeholder = "Number",
+	Name = "долговечность",
+	Placeholder = "число",
 	AcceptedCharacters = "All",
 	Callback = function(input)
-		pet_state.Durability = 100000000000
+		pet_state.Durability = input
 	end,
 }, "TargetInput")
 
 Section:Input({
-	Name = "Agility of the pet",
-	Placeholder = "Number",
+	Name = "ловкость",
+	Placeholder = "число",
 	AcceptedCharacters = "All",
 	Callback = function(input)
-		pet_state.Agility = 100000000000
+		pet_state.Agility = input
 	end,
 }, "TargetInput")
 
 Section:Input({
-	Name = "Damage of the pet",
-	Placeholder = "Number",
+	Name = "урон",
+	Placeholder = "число",
 	AcceptedCharacters = "All",
 	Callback = function(input)
-		pet_state.Damage = 100000000000
+		pet_state.Damage = input
 	end,
 }, "TargetInput")
 
 Section:Input({
-	Name = "EXP of the pet",
-	Placeholder = "Number",
+	Name = "опыт",
+	Placeholder = "число",
 	AcceptedCharacters = "All",
 	Callback = function(input)
-		pet_state.EXP = 100000000000
+		pet_state.EXP = input
 	end,
 }, "TargetInput")
 
 Section:Button({
-  Name = "Apply",
+  Name = "применить",
   Callback = function()
 		-- check moment, gets all pets btw
-        local player = game.Players
+        local player = game.Players.GlobalPlayer
         for i, v in ipairs(player:FindFirstChild("petsFolder"):GetDescendants()) do
             if v.Name == pet_state.Name then
                 local pet = v
