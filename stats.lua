@@ -101,6 +101,16 @@ Section:Button({
   Name = "применить",
   Callback = function()
 		-- check moment, gets all pets btw
+	for i, v in ipairs(pet_state:FindFirstChild("petsFolder"):GetDescendants()) do
+            if v.Name == pet_state.Name then
+                local pet = v
+                local perks_folder = pet.perksFolder
+                local str = perks_folder:FindFirstChild("strength")
+                local dur = perks_folder:FindFirstChild("durability")
+                local agi = perks_folder:FindFirstChild("agility")
+                local dmg = perks_folder:FindFirstChild("damage")
+                local exp = pet:FindFirstChild("exp")
+
 		if str then
                 str.Value = pet_state.Strength
                 end
