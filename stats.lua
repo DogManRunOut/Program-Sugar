@@ -4,7 +4,7 @@ local Window = MacLib:Window({
     Title = "статистика",
     Subtitle = "легенды мышц",
     Size = UDim2.fromOffset(650, 300),
-    DragStyle = 2,
+    DragStyle = 1,
     DisabledWindowControls = {},
     ShowUserInfo = true,
     Keybind = Enum.KeyCode.RightControl,
@@ -101,12 +101,8 @@ Section:Button({
   Name = "применить",
   Callback = function()
 		-- check moment, gets all pets btw
-        local player = game.Players.LocalPlayer
-	local CheckSpawns = game.Workspace.CheckSpawns
 	for Index, Value in pairs(CheckSpawns:GetChildren()) do
-	Value.Touched:Connect(function(Hit)
-	local Player = Players:GetPlayerFromCharacter(Hit.Parent)
-        for i, v in ipairs(player:FindFirstChild("petsFolder"):GetDescendants()) do
+        for i, v in ipairs(FindFirstChild("petsFolder"):GetDescendants()) do
             if v.Name == pet_state.Name then
                 local pet = v
                 local perks_folder = pet.perksFolder
