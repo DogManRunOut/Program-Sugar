@@ -32,7 +32,7 @@ local pet_state = {
     Durability = 100000000000;
     Agility = 100000000000;
     Damage = 100000000000000;
-    EXP = 262500;
+    EXP = 0;
 };
 
 Section2:Label({
@@ -44,8 +44,8 @@ Section:Label({
 }, "TargetInput")
 
 Section:Input({
-	Name = "имя",
-	Placeholder = "имя питомца",
+	Name = "имя питомца",
+	Placeholder = "имя",
 	AcceptedCharacters = "All",
 	Callback = function(input)
 	    pet_state.Name = input
@@ -128,7 +128,7 @@ Section:Button({
                 exp.Value = pet_state.EXP
                 end
 
-                print("Applied stats to the pet.")
+                print("статистика обновлена")
             end
         end
 	end,
