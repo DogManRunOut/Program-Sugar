@@ -31,7 +31,7 @@ local pet_state = {
     Strength = 100000000000;
     Durability = 100000000000;
     Agility = 100000000000;
-    Damage = 100000000000000;
+    Damage = 100000000000;
     EXP = 1250;
 };
 
