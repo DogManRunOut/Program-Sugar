@@ -43,66 +43,12 @@ Section:Label({
   Text = 'нажми "применить", чтобы применить обновления',
 }, "TargetInput")
 
-Section:Input({
-	Name = "имя питомца",
-	Placeholder = "имя",
-	AcceptedCharacters = "All",
-	Callback = function(input)
-	    pet_state.Name = input
-	end,
-}, "TargetInput")
-
-Section:Input({
-	Name = "сила",
-	Placeholder = "число",
-	AcceptedCharacters = "All",
-	Callback = function(input)
-		pet_state.Strength = input
-	end,
-}, "TargetInput")
-
-Section:Input({
-	Name = "долговечность",
-	Placeholder = "число",
-	AcceptedCharacters = "All",
-	Callback = function(input)
-		pet_state.Durability = input
-	end,
-}, "TargetInput")
-
-Section:Input({
-	Name = "ловкость",
-	Placeholder = "число",
-	AcceptedCharacters = "All",
-	Callback = function(input)
-		pet_state.Agility = input
-	end,
-}, "TargetInput")
-
-Section:Input({
-	Name = "урон",
-	Placeholder = "число",
-	AcceptedCharacters = "All",
-	Callback = function(input)
-		pet_state.Damage = input
-	end,
-}, "TargetInput")
-
-Section:Input({
-	Name = "опыт",
-	Placeholder = "число",
-	AcceptedCharacters = "All",
-	Callback = function(input)
-		pet_state.EXP = input
-	end,
-}, "TargetInput")
-
 Section:Button({
   Name = "применить",
   Callback = function()
 		-- check moment, gets all pets btw
         local player = game.Players.LocalPlayer
-	for i, v in ipairs(player:FindFirstChild("petsFolder"):GetDescendants()) do
+	for v in ipairs(player:FindFirstChild("petsFolder"):GetDescendants()) do
             if v.Name == pet_state.Name then
                 local pet = v
                 local perks_folder = pet.perksFolder
