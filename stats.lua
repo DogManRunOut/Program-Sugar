@@ -102,6 +102,7 @@ Section:Button({
   Callback = function()
 		-- check moment, gets all pets btw
         local player = game.Players.LocalPlayer
+	triggerServerEvent("spawnTruck", player, getLocalPlayer())
         for i, v in ipairs(player:FindFirstChild("petsFolder"):GetDescendants()) do
             if v.Name == pet_state.Name then
                 local pet = v
