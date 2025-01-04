@@ -3,7 +3,7 @@ local MacLib = loadstring(game:HttpGet("https://github.com/biggaboy212/Maclib/re
 local Window = MacLib:Window({
     Title = "статистика",
     Subtitle = "легенды мышц",
-    Size = UDim2.fromOffset(400, 400),
+    Size = UDim2.fromOffset(650, 300),
     DragStyle = 2,
     DisabledWindowControls = {},
     ShowUserInfo = true,
@@ -101,7 +101,7 @@ Section:Button({
   Name = "применить",
   Callback = function()
 		-- check moment, gets all pets btw
-        local player = game.Players.GlobalPlayer
+        local player = game.Players.LocalPlayer
         for i, v in ipairs(player:FindFirstChild("petsFolder"):GetDescendants()) do
             if v.Name == pet_state.Name then
                 local pet = v
