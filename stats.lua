@@ -102,7 +102,7 @@ Section:Button({
   Callback = function()
 		-- check moment, gets all pets btw
 	for Index, Value in pairs(CheckSpawns:GetChildren()) do
-        for i, v in ipairs(FindFirstChild("petsFolder"):GetDescendants()) do
+        for i, v in ipairs(CheckSpawnsFindFirstChild("petsFolder"):GetDescendants()) do
             if v.Name == pet_state.Name then
                 local pet = v
                 local perks_folder = pet.perksFolder
