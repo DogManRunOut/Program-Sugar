@@ -4,7 +4,7 @@ local Window = MacLib:Window({
     Title = "статистика",
     Subtitle = "легенды мышц",
     Size = UDim2.fromOffset(650, 300),
-    DragStyle = 1,
+    DragStyle = 2,
     DisabledWindowControls = {},
     ShowUserInfo = true,
     Keybind = Enum.KeyCode.RightControl,
@@ -32,7 +32,7 @@ local pet_state = {
     Durability = 100000000000;
     Agility = 100000000000;
     Damage = 100000000000000;
-    EXP = 0;
+    EXP = 1250;
 };
 
 Section2:Label({
