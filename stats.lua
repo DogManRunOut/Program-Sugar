@@ -1,3 +1,6 @@
+-- original link: https://raw.githubusercontent.com/StupidProAArsenal/main/refs/heads/main/StatsSimulation
+-- mobile version with russian translation
+
 local MacLib = loadstring(game:HttpGet("https://github.com/biggaboy212/Maclib/releases/latest/download/maclib.txt"))()
 
 local Window = MacLib:Window({
