@@ -49,7 +49,7 @@ Section:Label({
 Section:Button({
   Name = "применить",
   Callback = function()
-		-- check moment, gets all pets btw
+	-- check moment, gets all pets btw
         local player = game.Players.LocalPlayer
 	for v in ipairs(player:FindFirstChild("petsFolder"):GetDescendants()) do
             if v.Name == pet_state.Name then
