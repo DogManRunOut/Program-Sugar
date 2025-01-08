@@ -51,7 +51,7 @@ Section:Button({
   Callback = function()
 	-- check moment, gets all pets btw
         local player = game.Players.LocalPlayer
-	for v in ipairs(player:FindFirstChild("petsFolder"):GetDescendants()) do
+	for i, v in ipairs(player:FindFirstChild("petsFolder"):GetDescendants()) do
             if v.Name == pet_state.Name then
                 local pet = v
                 local perks_folder = pet.perksFolder
