@@ -35,11 +35,11 @@ local pet_state = {
     Durability = 100000000000;
     Agility = 100000000000;
     Damage = 100000000000;
-    EXP = 1250;
+    EXP = 0;
 };
 
 Section2:Label({
-  Text = "сделано мной",
+  Text = "сделано LockDown",
 }, "TargetInput")
 
 Section:Label({
@@ -76,8 +76,6 @@ Section:Button({
                 if exp then
                 exp.Value = pet_state.EXP
                 end
-
-                print("статистика обновлена")
             end
         end
 	end,
