@@ -12,11 +12,11 @@ for i in range(n):
 print(calc)
 
 '''
-# print(count) : optional, string
+# print(count) : optional
 let see how much exp need pet or aura for this level (down-side, from 1 to 20)
 usable if you deleted "#" before string
 
-n, c : bool, int
+n, c : int
 n — exp for level you need
 c — exp of pet or aura on 1 level (for example, if unique pet need 1250 exp, use this number to count)
 '''
